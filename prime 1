@@ -1,0 +1,31 @@
+{
+	
+}#include<stdio.h>
+#include<math.h>
+int main()
+{
+ int t,m,n,s,i,temp,flag,j;
+ scanf("%d",&t);
+ while(t--)
+ {
+ scanf("%d%d",&m,&n);
+ if(m==1)
+ m++;
+ for(i=m;i<=n;i++)
+ {
+ flag=0;
+ temp=sqrt(i);
+ for(j=2;j<=temp;j++)
+ {
+ if(i%j==0)
+ {
+ flag=1;
+ break;
+ }
+ }
+ if(flag==0)
+ printf("%d\n",i);
+ }
+ }
+ return 0;
+}
